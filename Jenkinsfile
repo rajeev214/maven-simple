@@ -6,7 +6,7 @@ pipeline {
 
     stage("scm checkout") {
   
-       step {
+       steps {
 
               git 'https://github.com/rajeev214/maven-simple.git'
 
@@ -15,7 +15,7 @@ pipeline {
     
     stage("Build") {
     
-       step {
+       steps {
         
            def mvnhm
 	   mvnhm = tool mvn3
