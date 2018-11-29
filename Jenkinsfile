@@ -2,6 +2,7 @@ pipeline {
 
   agent any
 
+    def mvnhm
   stages {
 
     stage("scm checkout") {
@@ -13,7 +14,6 @@ pipeline {
        }    
     }
     
-    def mvnhm
     stage("Build") {
     
        steps {
