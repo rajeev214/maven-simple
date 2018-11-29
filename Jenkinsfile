@@ -13,11 +13,11 @@ pipeline {
        }    
     }
     
+    def mvnhm
     stage("Build") {
     
        steps {
         
-           def mvnhm
 	   mvnhm = tool 'mvn3'
            sh "'${mvnhm}/bin/mvn' clean package"
        }
