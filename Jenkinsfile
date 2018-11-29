@@ -17,8 +17,8 @@ pipeline {
     
        steps {
         
-	 mvnhm  = tool 'mvn3'
-           sh "'${mvnhm}/bin/mvn' clean package"
+         def mvnHm = tool name: 'mvn3', type: 'maven'  
+	 sh "'${mvnhm}/bin/mvn' clean package"
        }
     }
 
