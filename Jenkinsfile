@@ -2,6 +2,9 @@ pipeline {
 
   agent any
 
+  tools {
+        maven 'mvn3' 
+    }
   stages {
 
     stage("scm checkout") {
@@ -17,8 +20,7 @@ pipeline {
     
        steps {
         
-         def mvnHm = tool name: 'mvn3', type: 'maven'  
-	 sh "'${mvnhm}/bin/mvn' clean package"
+	 sh "mvn clean package"
        }
     }
 
